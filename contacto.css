@@ -1,0 +1,224 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff5f5;
+}
+
+
+/* CABECERA */
+
+header {
+    background-color: #e53935;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* SECCIÓN CONTACTO */
+
+.contacto {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* DISTRIBUCIÓN DE LAS DOS COLUMNAS */
+
+.contenido-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 35px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+}
+
+
+/* TARJETAS */
+
+.datos-contacto,
+.formulario-contacto {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.datos-contacto h3,
+.formulario-contacto h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+/* INFORMACIÓN DE CONTACTO */
+
+.datos-contacto p {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.mensaje {
+    margin-top: 30px;
+    color: #666;
+}
+
+
+/* FORMULARIO */
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contacto label {
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* CAMPOS DE TEXTO, DESPLEGABLE Y DESCRIPCIÓN */
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: white;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* EFECTO AL SELECCIONAR UN CAMPO */
+
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: #e53935;
+}
+
+
+/* BOTÓN DE ENVÍO */
+
+.formulario-contacto button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+    background-color: #c62828;
+}
+
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 750px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .contenido-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto {
+        padding: 35px 15px;
+    }
+
+    .datos-contacto,
+    .formulario-contacto {
+        padding: 22px;
+    }
+}
+
+	 /* COPY */
+	
+	footer {
+		background-color: #e53935;
+		padding: 20px;
+		text-align: center;
+		margin-top: 40px;
+	}
+
+	.copyright {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.copyright img {
+		width: 120px;
+		height: auto;
+	}
+
+	.copyright p {
+		margin: 0;
+		color: black;
+		font-size: 14px;
+	}

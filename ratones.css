@@ -1,0 +1,226 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff5f5;
+}
+
+
+/* CABECERA */
+
+header {
+    background-color: #e53935;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* CATÁLOGO */
+
+.catalogo {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.catalogo h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.introduccion {
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+
+/* NOVEDAD */
+
+.novedad {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+
+    text-align: left;
+}
+
+.imagen-novedad img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    display: block;
+}
+
+.texto-novedad h3 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.texto-novedad p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #e53935;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* TÍTULO DE PRODUCTOS */
+
+.categoria {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+}
+
+.categoria h3 {
+    text-align: left;
+    font-size: 22px;
+    border-bottom: 2px solid #e53935;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+}
+
+
+/* CUADRÍCULA DE PRODUCTOS */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+}
+
+.producto h4 {
+    font-size: 18px;
+    margin: 18px 0 10px;
+}
+
+.producto p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* MÓVILES */
+
+@media (max-width: 550px) {
+
+    .catalogo {
+        padding: 30px 15px;
+    }
+
+    .novedad {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .imagen-novedad img {
+        height: 230px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria h3 {
+        text-align: center;
+    }
+
+    .producto img {
+        height: 200px;
+    }
+}
+
+	 /* COPY */
+	
+	footer {
+		background-color: #e53935;
+		padding: 20px;
+		text-align: center;
+		margin-top: 40px;
+	}
+
+	.copyright {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.copyright img {
+		width: 120px;
+		height: auto;
+	}
+
+	.copyright p {
+		margin: 0;
+		color: black;
+		font-size: 14px;
+	}

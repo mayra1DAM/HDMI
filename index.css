@@ -1,0 +1,383 @@
+/* 1. CONFIGURACIÓN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Diseño general de la página */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fff5f5;
+    overflow-x: hidden;
+}
+
+/* Espacio y fondo del contenido principal */
+
+main {
+    padding: 30px 5%;
+    background-color: #fff5f5;
+}
+
+
+/* 2. CABECERA: LOGO, NOMBRE Y MENÚ */
+
+/* Organizar los elementos de la cabecera en horizontal */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 55px;
+    background-color: #e53935;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Tamaño y posición del contenedor del logo */
+
+.logo {
+    width: 80px;
+    height: 70px;
+    border: 1px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Ajustar el tamaño de la imagen del logo */
+
+.logo img {
+    width: 100px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Estilo del nombre del grupo */
+
+header h2 {
+    margin-left: 0;
+    font-size: 32px;
+    font-weight: normal;
+    color: black;
+}
+
+/* Organizar los enlaces del menú */
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-right: 80px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+/* Estilo de los enlaces */
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Efecto al pasar el ratón por los enlaces */
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* 3. TÍTULOS Y PÁRRAFOS */
+
+/* Título principal */
+
+h1 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+/* Títulos secundarios */
+
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+/* Separación entre líneas de texto */
+
+p {
+    line-height: 1.6;
+}
+
+
+/* 4. IMÁGENES */
+
+/* Contenedor de las imágenes */
+
+.imagen {
+    flex: 1;
+    width: 100%;
+    max-width: 420px;
+    min-height: 220px;
+    padding: 15px;
+    border: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajustar las imágenes al contenedor */
+
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.ubicacion .imagen img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* 5. SOBRE NOSOTROS */
+
+/* Colocar el texto y la imagen uno al lado del otro */
+
+.sobre-nosotros {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+/* El texto ocupa el espacio disponible */
+
+.texto {
+    flex: 1;
+}
+
+/* Ajustar el ancho de la imagen de esta sección */
+
+.sobre-nosotros .imagen {
+    width: 40%;
+    min-height: 220px;
+}
+
+
+/* 6. DÓNDE ENCONTRARNOS */
+
+/* Colocar la imagen y la información en horizontal */
+
+.ubicacion {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 30px;
+}
+
+.datos-ubicacion,
+.maquinas {
+    min-width: 0;
+}
+
+.maquinas {
+    border-left: 1px solid #ccc;
+    padding-left: 25px;
+}
+
+/* Ajustar el ancho de la imagen de ubicación */
+
+.ubicacion .imagen {
+    width: 100%;
+    max-width: 420px;
+    padding: 12px;
+    border: 1px solid #aaa;
+}
+
+/* El texto ocupa el espacio disponible */
+
+.ubicacion .texto {
+    flex: 1;
+}
+
+
+/* 7. VALORACIONES */
+
+.valoraciones {
+    border-top: 1px solid #ccc;
+    padding-top: 25px;
+}
+
+.columnas-opiniones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.opinion {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.opinion p {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+
+/* 8. ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 550px) {
+
+    /* CABECERA */
+
+    header {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    header h2 {
+        font-size: 27px;
+        margin: 0;
+    }
+
+    /* MENÚ */
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-right: 0;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+
+    main {
+        padding: 20px 15px;
+    }
+
+    /* TÍTULOS Y TEXTOS */
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* IMÁGENES */
+
+    .imagen {
+        max-width: 100%;
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .imagen img {
+        height: 200px;
+    }
+
+    /* SOBRE NOSOTROS */
+
+    .sobre-nosotros {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sobre-nosotros .imagen {
+        width: 100%;
+    }
+
+    /* UBICACIÓN */
+
+    .ubicacion {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px 0;
+    }
+
+    .ubicacion .imagen {
+        max-width: 100%;
+    }
+
+    .ubicacion .imagen img {
+        height: 200px;
+    }
+
+    .maquinas {
+        border-left: none;
+        border-top: 1px solid #ccc;
+        padding: 20px 0 0;
+    }
+
+    /* VALORACIONES */
+
+    .columnas-opiniones {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .opinion {
+        padding: 15px;
+    }
+}
+
+	 /* COPY */
+	
+	footer {
+		background-color: #e53935;
+		padding: 20px;
+		text-align: center;
+		margin-top: 40px;
+	}
+
+	.copyright {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.copyright img {
+		width: 120px;
+		height: auto;
+	}
+
+	.copyright p {
+		margin: 0;
+		color: black;
+		font-size: 14px;
+	}

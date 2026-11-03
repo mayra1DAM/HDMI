@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | HDMI</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>HDMI</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+        </nav>
+    </header>
+
+    <section class="contacto">
+
+        <h2>Contacta con nosotros</h2>
+
+        <div class="contenido-contacto">
+
+            <div class="datos-contacto">
+                <h3>Recuerda que puedes encontrarnos en:</h3>
+
+                <p><strong>Email:</strong> hdmi.team@gmail.com</p>
+				
+                <p><strong>Teléfono:</strong> 612 579 550</p>
+				
+                <p><strong>Ubicación:</strong> Calle Astarloa, 6, Abando, 48001 Bilbao, Vizcaya, España</p>
+
+                <p class="mensaje">
+                    Estamos siempre dispuestos a resolver alguna duda o incidencia!
+                </p>
+            </div>
+
+            <div class="formulario-contacto">
+
+                <h3>Formulario de contacto</h3>
+
+                <form>
+
+                    <label for="motivo">Motivo de la consulta</label>
+
+					<select id="motivo" name="motivo" required>
+						<option value="" disabled selected>
+							Selecciona un motivo
+						</option>
+
+						<option value="producto-danado">
+							Producto dañado
+						</option>
+
+						<option value="devolucion">
+							Devolución
+						</option>
+
+						<option value="incidencia-maquina">
+							Incidencia con alguna máquina expendedora
+						</option>
+
+						<option value="otros">
+							Otros
+						</option>
+					</select>
+
+                    <label for="email">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Introduce tu correo electrónico"
+                        required
+                    >
+
+                    <label for="descripcion">Descripción de la incidencia</label>
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        rows="5"
+                        placeholder="Cuéntanos qué ha ocurrido..."
+                        required
+                    ></textarea>
+
+                    <label for="pedido">Número de pedido</label>
+                    <input
+                        type="text"
+                        id="pedido"
+                        name="pedido"
+                        placeholder="Introduce tu número de pedido"
+                    >
+
+                    <label for="telefono">Número de teléfono</label>
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Introduce tu teléfono"
+                    >
+
+                    <button type="submit">Enviar consulta</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<footer>
+    <div class="copyright">
+        <img src="fotos/cc.png" alt="Creative Commons BY">
+    </div>
+</footer>
+
+</body>
+</html>
